@@ -1,0 +1,58 @@
+{
+  "properties": [
+    {
+      "name": "app.jwt.secret",
+      "type": "java.lang.String",
+      "description": "JWT secret key for signing tokens",
+      "defaultValue": "change-this-development-secret-change-this-development-secret"
+    },
+    {
+      "name": "app.jwt.expiration-ms",
+      "type": "java.lang.Long",
+      "description": "JWT token expiration time in milliseconds",
+      "defaultValue": "86400000"
+    },
+    {
+      "name": "app.frontend-url",
+      "type": "java.lang.String",
+      "description": "Frontend application URL for CORS configuration",
+      "defaultValue": "http://localhost:5173"
+    },
+    {
+      "name": "app.upload-dir",
+      "type": "java.lang.String",
+      "description": "Directory for uploading profile photos and documents",
+      "defaultValue": "uploads"
+    },
+    {
+      "name": "app.google-oauth-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable Google OAuth2 authentication",
+      "defaultValue": "false"
+    }
+  ],
+  "hints": [
+    {
+      "name": "app.jwt.secret",
+      "values": [
+        {
+          "value": "change-this-development-secret-change-this-development-secret",
+          "description": "Default development secret - MUST be changed in production"
+        }
+      ]
+    },
+    {
+      "name": "app.upload-dir",
+      "values": [
+        {
+          "value": "uploads",
+          "description": "Default uploads directory"
+        },
+        {
+          "value": "/var/app/uploads",
+          "description": "Absolute path example for production"
+        }
+      ]
+    }
+  ]
+}
